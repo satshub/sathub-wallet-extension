@@ -39,8 +39,22 @@ function MintItem({ info }: { info: InscriptionMintedItem }) {
     </Column>
   );
 }
-
 export default function DiscoverTabScreen() {
+  return (
+    <Layout>
+      <Header />
+      <Content>
+        Sathub Faucet
+      </Content>
+      <Footer px="zero" py="zero">
+        <NavTabBar tab="mint" />
+      </Footer>
+    </Layout>
+  );
+}
+
+
+export function _DiscoverTabScreen() {
   const inscriptionSummary = useInscriptionSummary();
   return (
     <Layout>

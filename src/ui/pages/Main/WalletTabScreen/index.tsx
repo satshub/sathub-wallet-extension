@@ -32,9 +32,10 @@ import { amountToSatoshis, satoshisToAmount, useWallet } from '@/ui/utils';
 
 import { BuyBTCModal } from '../../BuyBTC/BuyBTCModal';
 import { useNavigate } from '../../MainRoute';
-import { AtomicalsTab } from './AtomicalsTab';
 import { OrdinalsTab } from './OrdinalsTab';
 import { RunesList } from './RunesList';
+import { HistoryTab } from './History';
+import { UtxoListTab } from './UtxoList';
 
 const $noBreakStyle: CSSProperties = {
   whiteSpace: 'nowrap',
@@ -128,15 +129,20 @@ export default function WalletTabScreen() {
       children: <OrdinalsTab />
     },
     {
-      key: AssetTabKey.ATOMICALS,
-      label: 'Atomicals',
-      children: <AtomicalsTab />
-    },
-    {
       key: AssetTabKey.RUNES,
       label: 'Runes',
       children: <RunesList />
-    }
+    },
+    {
+      key: AssetTabKey.HISTORY,
+      label: 'History',
+      children: <HistoryTab />
+    },
+    {
+      key: AssetTabKey.UTXO,
+      label: 'UTXO',
+      children: <UtxoListTab />
+    },
   ];
 
   const blockstreamUrl = useBlockstreamUrl();

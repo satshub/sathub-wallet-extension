@@ -22,7 +22,9 @@ export interface UIState {
 export enum AssetTabKey {
   ORDINALS,
   ATOMICALS,
-  RUNES
+    RUNES,
+  HISTORY,
+  UTXO
 }
 
 export enum OrdinalsAssetTabKey {
