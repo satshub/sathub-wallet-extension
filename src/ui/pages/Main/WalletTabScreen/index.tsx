@@ -123,6 +123,7 @@ export default function WalletTabScreen() {
   }, []);
 
   const tabItems = [
+    /*
     {
       key: AssetTabKey.ORDINALS,
       label: 'Ordinals',
@@ -133,9 +134,10 @@ export default function WalletTabScreen() {
       label: 'Runes',
       children: <RunesList />
     },
+    */
     {
       key: AssetTabKey.HISTORY,
-      label: 'History',
+      label: 'Transaction',
       children: <HistoryTab />
     },
     {
